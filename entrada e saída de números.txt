@@ -1,0 +1,19 @@
+let numeros = [];
+
+while (true) {
+  let entrada = prompt('Digite um número (ou "sair" para encerrar a entrada):');
+
+  if (entrada.toLowerCase() === 'sair') {
+    break;
+  }
+
+  let numero = parseFloat(entrada);
+
+  if (!isNaN(numero)) {
+    numeros.push(numero);
+  } else {
+    console.log('Entrada inválida. Por favor, digite um número válido.');
+  }
+}
+
+console.log('Números digitados:', numeros.join(', '));
