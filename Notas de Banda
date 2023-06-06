@@ -1,0 +1,26 @@
+var lista_bandas = [];
+var lista_notas = [];
+var lista_genero = [];
+
+var contador = 0;
+while (contador < 5) {
+    contador++; // abreviação para contador = contador +1
+
+    var banda = prompt("Digite o nome de uma banda:");
+    lista_bandas.push(banda);
+
+    var genero = prompt("Digite o gênero muscial da banda:");
+    lista_genero.push(genero);
+
+    var nota = prompt("Digite uma nota de 0 a 10 para a banda " + banda);
+    lista_notas.push(nota);
+}
+
+var texto_final = "";
+contador = 0;
+while (contador < 5) {
+    texto_final += lista_bandas[contador] + " é do gênero " +  lista_genero[contador] + " -  Nota " + lista_notas[contador] + "\n";
+    contador++;
+}
+
+alert(texto_final);
