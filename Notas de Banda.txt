@@ -7,12 +7,24 @@ while (contador < 5) {
     contador++; // abreviação para contador = contador +1
 
     var banda = prompt("Digite o nome de uma banda:");
+    if(banda == null) {
+        break;
+    }
+    
     lista_bandas.push(banda);
 
     var genero = prompt("Digite o gênero muscial da banda:");
+    if(genero == null) {
+        break;
+    }
+    
     lista_genero.push(genero);
 
     var nota = prompt("Digite uma nota de 0 a 10 para a banda " + banda);
+    if(nota == null) {
+        break;
+    }
+        
     lista_notas.push(nota);
 }
 
