@@ -1,0 +1,21 @@
+const senhaValida = '1234';
+let tentativasRestantes = 3;
+
+function verificarSenha(senha) {
+  if (senha === senhaValida) {
+    console.log('Acesso Permitido');
+  } else {
+    tentativasRestantes--;
+    if (tentativasRestantes > 0) {
+      console.log(`Senha inválida. Você tem ${tentativasRestantes} tentativa(s) restante(s).`);
+      const novaSenha = prompt('Digite a senha:');
+      verificarSenha(novaSenha);
+    } else {
+      console.log('Acesso Negado. Suas tentativas acabaram.');
+    }
+  }
+}
+
+// Exemplo de uso:
+const senhaFornecida = prompt('Digite a senha:');
+verificarSenha(senhaFornecida);
